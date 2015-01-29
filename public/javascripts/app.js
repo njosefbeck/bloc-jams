@@ -93,7 +93,8 @@
 require.register("scripts/app", function(exports, require, module) {
 $(document).ready(function() {
   $('.hero-content h3').click(function() {
-    console.log("hello!");
+    var subText = $(this).text();
+    $(this).text(subText + "!");
   });
 })
 
