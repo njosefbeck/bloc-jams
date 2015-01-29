@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/scripts/app.js"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA","file":"public/javascripts/app.js","sourcesContent":["console.log(\"hello!\");"]}
