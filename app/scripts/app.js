@@ -3,4 +3,9 @@ $(document).ready(function() {
     var subText = $(this).text();
     $(this).text(subText + "!");
   });
-})
+
+  $('.selling-points .point').hover(function() {
+    console.log('Hover action triggered.');
+    $(this).animate({'margin-top': '10px'});
+  });
+});
