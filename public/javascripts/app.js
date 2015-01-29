@@ -91,7 +91,10 @@
   globals.require.brunch = true;
 })();
 require.register("scripts/app", function(exports, require, module) {
-console.log("hello!");
+$(document).ready(function() {
+  console.log("hello!");
+})
+
 });
 
 ;
