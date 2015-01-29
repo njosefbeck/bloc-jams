@@ -91,6 +91,10 @@
   globals.require.brunch = true;
 })();
 require.register("scripts/app", function(exports, require, module) {
+require("./landing");
+});
+
+;require.register("scripts/landing", function(exports, require, module) {
 $(document).ready(function() {
   $('.hero-content h3').click(function() {
     var subText = $(this).text();
