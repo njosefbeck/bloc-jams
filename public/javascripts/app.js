@@ -92,7 +92,9 @@
 })();
 require.register("scripts/app", function(exports, require, module) {
 $(document).ready(function() {
-  console.log("hello!");
+  $('.hero-content h3').click(function() {
+    console.log("hello!");
+  });
 })
 
 });
