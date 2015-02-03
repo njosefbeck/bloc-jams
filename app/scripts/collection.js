@@ -22,6 +22,10 @@ if (document.URL.match(/\/collection.html/)) {
   $(document).ready(function() {
     var $collection = $(".collection-container .row");
     $collection.empty();
-    $collection.append(buildAlbumThumbnail());
+
+    for (var i = 0; i < 33; i++) {
+      var $newThumbnail = buildAlbumThumbnail();
+      $collection.append($newThumbnail);
+    }
   });
 }
