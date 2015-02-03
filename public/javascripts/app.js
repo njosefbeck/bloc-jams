@@ -96,7 +96,7 @@ require("./collection");
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {
-
+console.log("collection.js");
 });
 
 ;require.register("scripts/landing", function(exports, require, module) {
