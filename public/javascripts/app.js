@@ -96,7 +96,12 @@ require("./collection");
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {
-console.log("collection.js");
+if (document.URL.match(/\/collection.html/)) {
+  // Wait until the HTML is fully processed.
+  $(document).ready(function() {
+    console.log("collection.js");
+  });
+}
 });
 
 ;require.register("scripts/landing", function(exports, require, module) {
