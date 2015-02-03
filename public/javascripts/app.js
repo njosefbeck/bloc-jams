@@ -92,6 +92,11 @@
 })();
 require.register("scripts/app", function(exports, require, module) {
 require("./landing");
+require("./collection");
+});
+
+;require.register("scripts/collection", function(exports, require, module) {
+
 });
 
 ;require.register("scripts/landing", function(exports, require, module) {
