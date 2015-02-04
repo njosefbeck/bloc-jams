@@ -91,7 +91,7 @@
   globals.require.brunch = true;
 })();
 require.register("scripts/album", function(exports, require, module) {
-
+console.log("album.js");
 });
 
 ;require.register("scripts/app", function(exports, require, module) {
