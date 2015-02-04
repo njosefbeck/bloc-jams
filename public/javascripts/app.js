@@ -158,7 +158,15 @@ if (document.URL.match(/\/album.html/)) {
     var $albumImage = $('.album-image img');
     $albumImage.attr('src', album.albumArtUrl);
 
-    
+    // Update the Song List
+    var $songList = $(".album-song-listing");
+    $songList.empty();
+    var songs = album.songs;
+    for (var i = 0; i < songs.length; i++) {
+      var songData = songs[i];
+      var $newRow = createSongRow(i + 1, songData.name, songData.length);
+      $songList.append($newRow);
+    }
 
   });
 
