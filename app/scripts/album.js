@@ -31,6 +31,18 @@ var albumMarconi = {
   ]
 };
 
+var createSongRow = function (songNumber, songName, songLength) {
+  var template =
+      '<tr>'
+    + ' <td class="col-md-1">' + songNumber + '</td>'
+    + ' <td class="col-md-9">' + songName + '</td>'
+    + ' <td class="col-md-2">' + songLength + '</td>'
+    + '</tr>'
+    ;
+
+    return $(template);
+};
+
 if (document.URL.match(/\/album.html/)) {
   
   $(document).ready(function() {
@@ -50,5 +62,5 @@ if (document.URL.match(/\/album.html/)) {
     $albumMeta.text(album.year + " on " + album.label);
 
   });
-  
+
 }
