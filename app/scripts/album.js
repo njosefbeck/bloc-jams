@@ -61,6 +61,12 @@ if (document.URL.match(/\/album.html/)) {
     var $albumMeta = $('.album-meta-info');
     $albumMeta.text(album.year + " on " + album.label);
 
+    // Update the album image
+    var $albumImage = $('.album-image img');
+    $albumImage.attr('src', album.albumArtUrl);
+
+    
+
   });
 
 }
