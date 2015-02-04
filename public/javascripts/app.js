@@ -125,9 +125,25 @@ var albumMarconi = {
 };
 
 if (document.URL.match(/\/album.html/)) {
+  
   $(document).ready(function() {
-    console.log("album.js");
+    
+    var album = albumPicasso;
+
+    // Update the album title
+    var $albumTitle = $('.album-title');
+    $albumTitle.text(album.name);
+
+    // Update the album artist
+    var $albumArtist = $('.album-artist');
+    $albumArtist.text(album.artist);
+
+    // Update the meta information
+    var $albumMeta = $('.album-meta-info');
+    $albumMeta.text(album.year + " on " + album.label);
+
   });
+  
 }
 });
 
