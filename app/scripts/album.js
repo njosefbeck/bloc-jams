@@ -43,13 +43,9 @@ var createSongRow = function (songNumber, songName, songLength) {
     return $(template);
 };
 
-if (document.URL.match(/\/album.html/)) {
-  
-  $(document).ready(function() {
-    
-    var album = albumPicasso;
+var changeAlbumView = function (album) {
 
-    // Update the album title
+  // Update the album title
     var $albumTitle = $('.album-title');
     $albumTitle.text(album.name);
 
@@ -74,6 +70,14 @@ if (document.URL.match(/\/album.html/)) {
       var $newRow = createSongRow(i + 1, songData.name, songData.length);
       $songList.append($newRow);
     }
+
+};
+
+if (document.URL.match(/\/album.html/)) {
+  
+  $(document).ready(function() {
+    
+    changeAlbumView(albumPicasso);
 
   });
 
