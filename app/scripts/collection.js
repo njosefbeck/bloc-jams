@@ -49,6 +49,8 @@ var updateCollectionView = function () {
     var onHover = function(event) {
       $(this).append(buildAlbumOverlay("/album.html"));
     };
+
+    $collection.find('.collection-album-image-container').hover(onHover);
 };
 
 if (document.URL.match(/\/collection.html/)) {
