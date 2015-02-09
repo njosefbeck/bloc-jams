@@ -50,7 +50,11 @@ var updateCollectionView = function () {
       $(this).append(buildAlbumOverlay("/album.html"));
     };
 
-    $collection.find('.collection-album-image-container').hover(onHover);
+    var offHover = function(event) {
+      $(this).find('.collection-album-image-overlay').remove();
+    };
+
+    $collection.find('.collection-album-image-container').hover(onHover, offHover);
 };
 
 if (document.URL.match(/\/collection.html/)) {

@@ -235,6 +235,16 @@ var updateCollectionView = function () {
       var $newThumbnail = buildAlbumThumbnail();
       $collection.append($newThumbnail);
     }
+
+    var onHover = function(event) {
+      $(this).append(buildAlbumOverlay("/album.html"));
+    };
+
+    var offHover = function(event) {
+      $(this).find('.collection-album-image-overlay').remove();
+    };
+
+    $collection.find('.collection-album-image-container').hover(onHover, offHover);
 };
 
 if (document.URL.match(/\/collection.html/)) {
