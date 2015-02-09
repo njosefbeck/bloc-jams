@@ -45,6 +45,10 @@ var updateCollectionView = function () {
       var $newThumbnail = buildAlbumThumbnail();
       $collection.append($newThumbnail);
     }
+
+    var onHover = function(event) {
+      $(this).append(buildAlbumOverlay("/album.html"));
+    };
 };
 
 if (document.URL.match(/\/collection.html/)) {
