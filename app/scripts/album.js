@@ -40,7 +40,20 @@ var createSongRow = function (songNumber, songName, songLength) {
     + '</tr>'
     ;
 
-    return $(template);
+    var $row = $(template);
+
+    var onHover = function (event) {
+      var songNumberCell = $(this).find('.song-number');
+      songNumberCell.html('<a class="album-song-button"><i class="fa fa-play"></i></a>');
+    };
+
+    var offHover = function (event) {
+      var songNumberCell = $(this).find('.song.number');
+      songNumberCell.html('');
+    };
+
+    $row.hover(onHover, offHover);
+    return $row;
 };
 
 var changeAlbumView = function (album) {
