@@ -141,7 +141,7 @@ var createSongRow = function (songNumber, songName, songLength) {
     };
 
     var offHover = function (event) {
-      var songNumberCell = $(this).find('.song.number');
+      var songNumberCell = $(this).find('.song-number');
       songNumberCell.html('');
     };
 
