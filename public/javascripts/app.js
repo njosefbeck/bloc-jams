@@ -142,7 +142,8 @@ var createSongRow = function (songNumber, songName, songLength) {
 
     var offHover = function (event) {
       var songNumberCell = $(this).find('.song-number');
-      songNumberCell.html('');
+      var songNumber = songNumberCell.data('song-number');
+      songNumberCell.html(songNumber);
     };
 
     $row.hover(onHover, offHover);
