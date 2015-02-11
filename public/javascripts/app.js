@@ -150,20 +150,27 @@ var createSongRow = function (songNumber, songName, songLength) {
     var clickHandler = function (event) {
       var songNumber = $(this).data('song-number');
 
-      if ( a song is playing ) {
-        // Stop playing current song.
-        // Replace stopped song button with number.
+      if ( currentlyPlayingSong !== null ) {
+        // Revert to song number for currently playing song because user started playing new song.
+        currentlyPlayingCell = $('.song-number[data-song-number="' + currentlyPlayingSong + '"]');
+        currentlyPlayingCell.html(currentlyPlayingSong);
       }
 
       if ( a non-playing song was clicked ) {
-        // A Play icon will be showing because of hover.
+        // Switch from Play -> Pause button to indicate new song is playing.
         // Switch from Play -> Pause to indicate new song is playing.
+        $(this).html('<a class="album-song-button"><i class="fa fa-pause"></i></a>');
+        
         // Set the current song to the one clicked.
+        currentlyPlayingSong = songNumber;
       }
 
       else if ( the playing song was clicked ) {
-        // Switch from Pause -> Play for current song to indicate pausing.
+        // Switch from Pause -> Play button to pause currently playing song.
+        $(this).html('<a class="album-song-button"><i class="fa fa-play"></i></a>');
+
         // Set the current song to null.
+        currentlyPlayingSong = null;
       }
     }
 
