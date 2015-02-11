@@ -63,7 +63,7 @@ var createSongRow = function (songNumber, songName, songLength) {
         currentlyPlayingCell.html(currentlyPlayingSong);
       }
 
-      if ( a non-playing song was clicked ) {
+      if ( currentlyPlayingSong !== songNumber ) {
         // Switch from Play -> Pause button to indicate new song is playing.
         // Switch from Play -> Pause to indicate new song is playing.
         $(this).html('<a class="album-song-button"><i class="fa fa-pause"></i></a>');
@@ -72,7 +72,7 @@ var createSongRow = function (songNumber, songName, songLength) {
         currentlyPlayingSong = songNumber;
       }
 
-      else if ( the playing song was clicked ) {
+      else if ( currentlyPlayingSong === songNumber ) {
         // Switch from Pause -> Play button to pause currently playing song.
         $(this).html('<a class="album-song-button"><i class="fa fa-play"></i></a>');
 
