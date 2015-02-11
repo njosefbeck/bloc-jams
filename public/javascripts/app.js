@@ -124,6 +124,8 @@ var albumMarconi = {
   ]
 };
 
+var currentlyPlayingSong = null;
+
 var createSongRow = function (songNumber, songName, songLength) {
   var template =
       '<tr>'
