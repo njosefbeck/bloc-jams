@@ -46,13 +46,18 @@ var createSongRow = function (songNumber, songName, songLength) {
 
     var onHover = function (event) {
       var songNumberCell = $(this).find('.song-number');
-      songNumberCell.html('<a class="album-song-button"><i class="fa fa-play"></i></a>');
+      var songNumber = songNumberCell.data('song-number');
+      if ( songNumber !== currentlyPlayingSong ) {
+        songNumberCell.html('<a class="album-song-button"><i class="fa fa-play"></i></a>');
+      }
     };
 
     var offHover = function (event) {
       var songNumberCell = $(this).find('.song-number');
       var songNumber = songNumberCell.data('song-number');
-      songNumberCell.html(songNumber);
+      if ( songNumber !== currentlyPlayingSong ) {
+        songNumberCell.html(songNumber);
+      }
     };
 
     // Toggle the play, pause, and song number based on the button clicked.
