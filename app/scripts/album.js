@@ -53,6 +53,28 @@ var createSongRow = function (songNumber, songName, songLength) {
       songNumberCell.html(songNumber);
     };
 
+    // Toggle the play, pause, and song number based on the button clicked.
+    var clickHandler = function (event) {
+      var songNumber = $(this).data('song-number');
+
+      if ( a song is playing ) {
+        // Stop playing current song.
+        // Replace stopped song button with number.
+      }
+
+      if ( a non-playing song was clicked ) {
+        // A Play icon will be showing because of hover.
+        // Switch from Play -> Pause to indicate new song is playing.
+        // Set the current song to the one clicked.
+      }
+
+      else if ( the playing song was clicked ) {
+        // Switch from Pause -> Play for current song to indicate pausing.
+        // Set the current song to null.
+      }
+    }
+
+    $row.find('.song-number').click(clickHandler);
     $row.hover(onHover, offHover);
     return $row;
 };
