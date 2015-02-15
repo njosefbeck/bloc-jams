@@ -219,3 +219,42 @@ td.song-number {
   height: 70px;
   text-align: center;
 }
+
+// PLAYER BAR STYLING //
+
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 100;
+}
+
+.player-bar a, .player-bar a:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.player-bar .container {
+  display: table;
+  padding: 0;
+  min-height: 100%;
+}
+
+.player-bar-control-group {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.player-bar .left-controls {
+  width: 25%;
+  text-align: left;
+}
+
+.player-bar .right-controls {
+  width: 25%;
+  text-align: right;
+}
