@@ -68,7 +68,7 @@
 
 .album-song-listing td {
   vertical-align: middle; }
-  .album-song-listing td.song-number {
+  .album-song-listing td .song-number {
     padding: 0;
     height: 70px;
     text-align: center; }

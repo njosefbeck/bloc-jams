@@ -3,9 +3,7 @@
   margin-bottom: 40px;
 }
 
-// This styles the right side of our Album Header
 .album-header-information {
-  //Pushes the album information down and makes sure there's sufficient space at the bottom of the page
   margin-top: 45px;
   margin-bottom: 20px;
 
@@ -32,12 +30,9 @@
   }
 }
 
-// This styles our Song Listing
 .table.album-song-listing {
-  // Override the font for the entire table.
   font-weight: 300;
 
-  // Override the defaults that Bootstrap sets.
   td {
     padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, .4);
@@ -69,14 +64,12 @@
   }
 }
 
-.album-song-listing {
-  td {
-    vertical-align: middle;
+.album-song-listing td {
+  vertical-align: middle;
 
-    &.song-number {
-      padding: 0;
-      height: 70px;
-      text-align: center;
-    }
+  .song-number {
+    padding: 0;
+    height: 70px;
+    text-align: center;
   }
 }
