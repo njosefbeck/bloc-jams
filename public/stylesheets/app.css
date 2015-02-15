@@ -203,7 +203,11 @@ td.song-number {
 
 .player-bar .play-controls a {
   font-size: 20px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  transition: all 100ms ease-in-out; }
+
+.player-bar .play-controls a:hover {
+  color: rgba(255, 255, 255, 0.5); }
 
 .player-bar .play-controls .previous {
   margin-right: 65px; }
