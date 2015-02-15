@@ -55,14 +55,14 @@
   color: #d2287b;
   border-radius: 50% 50%;
   display: inline-block;
-  width: 28px;
-  height: 28px; }
+  width: 25px;
+  height: 25px; }
   .album-song-button:hover {
     cursor: pointer;
     color: white;
     background-color: #d2287b; }
   .album-song-button i {
-    line-height: 28px; }
+    line-height: 25px; }
   .album-song-button .fa-play {
     padding-left: 5px; }
 
