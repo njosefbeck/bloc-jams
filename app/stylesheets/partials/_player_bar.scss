@@ -60,8 +60,8 @@
       margin: 0;
       position: absolute;
       width: 100%;
-      font-size: 16px;
-      font-weight: 300;
+      font-size: $base-font-size;
+      font-weight: $lighter-font-weight;
     }
 
     .song-name {
