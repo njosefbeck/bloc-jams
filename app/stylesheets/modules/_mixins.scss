@@ -1,0 +1,4 @@
+@mixin radial-gradient($first_color, $second_color) {
+  background: -webkit-radial-gradient($first_color, $second_color);
+  background: radial-gradient($first_color, $second_color);
+}

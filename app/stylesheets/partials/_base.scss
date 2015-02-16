@@ -11,8 +11,7 @@ body {
   margin: 0;
   padding: 0;
   padding-bottom: 150px; 
-  background: -webkit-radial-gradient(  #2b1339, #380c77);
-  background: radial-gradient(  #2b1339, #380c77);
+  @include radial-gradient(#2b1339, #380c77);
 }
 
 body.landing {
