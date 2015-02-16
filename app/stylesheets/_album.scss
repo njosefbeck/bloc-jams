@@ -30,11 +30,11 @@
   }
 }
 
-table.album-song-listing {
+.table .album-song-listing {
   font-weight: $lighter-font-weight;
 
   td {
-    padding: 20px;
+    padding: 50px;
     border-top: 1px solid rgba(255, 255, 255, .4);
   }
 }
@@ -46,8 +46,8 @@ table.album-song-listing {
   color: #d2287b;
   border-radius: 50% 50%;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
 
   &:hover {
     cursor: pointer;
@@ -56,7 +56,7 @@ table.album-song-listing {
   }
 
   i {
-    line-height: 25px;
+    line-height: 15px;
   }
 
   .fa-play {
