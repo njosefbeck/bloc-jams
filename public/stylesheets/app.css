@@ -67,10 +67,10 @@ body.landing {
     font-size: 16px;
     font-weight: 500; }
 
-.table .album-song-listing {
+.table.album-song-listing {
   font-weight: 300; }
-  .table .album-song-listing td {
-    padding: 50px;
+  .table.album-song-listing td {
+    padding: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.4); }
 
 .album-song-button {
@@ -80,14 +80,14 @@ body.landing {
   color: #d2287b;
   border-radius: 50% 50%;
   display: inline-block;
-  width: 15px;
-  height: 15px; }
+  width: 20px;
+  height: 20px; }
   .album-song-button:hover {
     cursor: pointer;
     color: white;
     background-color: #d2287b; }
   .album-song-button i {
-    line-height: 15px; }
+    line-height: 20px; }
   .album-song-button .fa-play {
     padding-left: 5px; }
 
