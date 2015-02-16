@@ -1,3 +1,4 @@
+/* variable that holds the purple color we've used a couple times throughout our application */
 html {
   height: 100%; }
 
@@ -66,10 +67,10 @@ body.landing {
     font-size: 16px;
     font-weight: 500; }
 
-.table.album-song-listing {
+.table .album-song-listing {
   font-weight: 300; }
-  .table.album-song-listing td {
-    padding: 20px;
+  .table .album-song-listing td {
+    padding: 50px;
     border-top: 1px solid rgba(255, 255, 255, 0.4); }
 
 .album-song-button {
@@ -79,14 +80,14 @@ body.landing {
   color: #d2287b;
   border-radius: 50% 50%;
   display: inline-block;
-  width: 25px;
-  height: 25px; }
+  width: 15px;
+  height: 15px; }
   .album-song-button:hover {
     cursor: pointer;
     color: white;
     background-color: #d2287b; }
   .album-song-button i {
-    line-height: 25px; }
+    line-height: 15px; }
   .album-song-button .fa-play {
     padding-left: 5px; }
 
