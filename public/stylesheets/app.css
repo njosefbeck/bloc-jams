@@ -247,6 +247,8 @@ body.landing {
     border-radius: 50%;
     cursor: pointer;
     transition: all 100ms ease-in-out; }
+  .seek-bar.no-animate .fill, .seek-bar.no-animate .thumb {
+    transition: none; }
   .seek-bar:hover .thumb {
     width: 20px;
     height: 20px;
