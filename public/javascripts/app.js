@@ -216,6 +216,20 @@ var changeAlbumView = function (album) {
 
 };
 
+var updateSeekPercentage = function ($seekBar, event) {
+  var barWidth = $seekBar.width();
+  var offSetX = ; // get mouse x offset here
+
+  var offsetXPercent = (offsetX / barWidth) * 100;
+  offsetXPercent = Math.max(0, offsetXPercent);
+  offsetXPercent = Math.min(100, offsetXPercent);
+
+  var percentageString = offsetXPercent + '%';
+  $seekBar.find('.fill').width(percentageString);
+  $seekBar.find('.thumb').css({left: percentageString});
+}
+
+
 if (document.URL.match(/\/album.html/)) {
   
   $(document).ready(function() {
