@@ -136,6 +136,13 @@ var updateSeekPercentage = function ($seekBar, event) {
   $seekBar.find('.thumb').css({left: percentageString});
 }
 
+var setupSeekBars = function () {
+
+  $seekBars = $('.player-bar .seek-bar');
+  $seekBars.click(function(event) {
+    updateSeekPercentage($(this), event);
+  });
+};
 
 if (document.URL.match(/\/album.html/)) {
   
