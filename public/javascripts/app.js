@@ -242,6 +242,7 @@ if (document.URL.match(/\/album.html/)) {
   $(document).ready(function() {
     
     changeAlbumView(albumPicasso);
+    setupSeekBars();
 
     $('.album-title').click(function() {
         changeAlbumView(albumMarconi);
