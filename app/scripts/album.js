@@ -125,7 +125,7 @@ var changeAlbumView = function (album) {
 
 var updateSeekPercentage = function ($seekBar, event) {
   var barWidth = $seekBar.width();
-  var offSetX = ; // get mouse x offset here
+  var offSetX = event.pageX - $seekBar.offset().left; // get mouse x offset here
 
   var offsetXPercent = (offsetX / barWidth) * 100;
   offsetXPercent = Math.max(0, offsetXPercent);
