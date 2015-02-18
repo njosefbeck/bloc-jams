@@ -123,9 +123,9 @@ var changeAlbumView = function (album) {
 
 };
 
-var updateSeekPercentage = function ($seekBar, event) {
+var updateSeekPercentage = function($seekBar, event) {
   var barWidth = $seekBar.width();
-  var offSetX = event.pageX - $seekBar.offset().left; // get mouse x offset here
+  var offsetX = event.pageX - $seekBar.offset().left; // get mouse x offset here
 
   var offsetXPercent = (offsetX / barWidth) * 100;
   offsetXPercent = Math.max(0, offsetXPercent);
@@ -151,9 +151,6 @@ if (document.URL.match(/\/album.html/)) {
     changeAlbumView(albumPicasso);
     setupSeekBars();
 
-    $('.album-title').click(function() {
-        changeAlbumView(albumMarconi);
-    });
 
   });
 
