@@ -366,5 +366,9 @@ $(document).ready(function() {
 
 });
 
+;require.register("scripts/profile", function(exports, require, module) {
+
+});
+
 ;
 //# sourceMappingURL=app.js.map
