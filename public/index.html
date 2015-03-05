@@ -28,7 +28,7 @@
 
     <div class='hero-content'> <!-- Hero content -->
         <div class="container">
-        <h1> Bloc Jams </h1>
+        <h1 ng-click="headerTextClicked()"> {{ headerText }} </h1>
         <h3 ng-click="subTextClicked()"> {{ subText }} </h3>
         </div>
     </div>
@@ -55,7 +55,7 @@
     <div class="landing-album-list container">
       <div class="row">
         <div class="col-md-4" ng-repeat="albumURL in albumURLs">
-          <img ng-src="{{albumURL}}">
+          <img class="albumShuffle" ng-src="{{albumURL}}">
         </div>
       </div>
     </div>
