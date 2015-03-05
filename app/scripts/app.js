@@ -14,8 +14,9 @@ angular.module('BlocJams', []).controller('Landing.controller', ['$scope', funct
 
   $scope.headerTextClicked = function() {
     console.log("Header was clicked");
-    shuffle($(".albumShuffle"));
-  }
+    var albumImages = $(".albumShuffle");
+    shuffle(albumImages);
+  };
 
   $scope.subText = "Turn the music up!";
 
