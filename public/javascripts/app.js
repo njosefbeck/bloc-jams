@@ -286,6 +286,7 @@ angular.module('BlocJams', []).controller('Landing.controller', ['$scope', funct
     };
 
   $scope.headerTextClicked = function() {
+    console.log("Header was clicked");
     shuffle($(".albumShuffle"));
   }
 
