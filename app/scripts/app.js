@@ -4,7 +4,7 @@
 //require("./profile");
 
 angular.module('BlocJams', []).controller('Landing.controller', ['$scope', function($scope) {
-  
+
   $scope.headerText = "Bloc Jams";
 
   $scope.albumURLs = [
@@ -26,8 +26,7 @@ angular.module('BlocJams', []).controller('Landing.controller', ['$scope', funct
 
   $scope.headerTextClicked = function() {
     console.log("Header was clicked");
-    var albumImages = $('.albumShuffle');
-    shuffle(albumImages);
+    shuffle($scope.albumURLs);
   };
 
   $scope.subText = "Turn the music up!";
@@ -37,5 +36,5 @@ angular.module('BlocJams', []).controller('Landing.controller', ['$scope', funct
   };
 
 
-  
+
 }]);
