@@ -276,7 +276,7 @@ if (document.URL.match(/\/album.html/)) {
 //require("./album");
 //require("./profile");
 
-angular.module('BlocJams', []).controller('Landing.controller', ['$scope', function($scope) {
+blocJams = angular.module('BlocJams', ['ui.router']);
 
   $scope.headerText = "Bloc Jams";
 
