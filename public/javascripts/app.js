@@ -292,7 +292,7 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
     controller: 'Song.controller',
     templateUrl: '/templates/song.html'
   });
-  
+
 }]);
 
 blocJams.controller('Landing.controller', ['$scope', function($scope) {
@@ -325,6 +325,11 @@ blocJams.controller('Landing.controller', ['$scope', function($scope) {
   $scope.subTextClicked = function() {
     $scope.subText += '!';
   };
+
+}]);
+
+blocJams.controller('Song.controller', ['$scope', function($scope) {
+  $scope.headerText = "Song Template";
 
 }]);
 
