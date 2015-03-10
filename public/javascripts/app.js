@@ -288,7 +288,7 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
   });
 
   $stateProvider.state('song', {
-    url: '/song.html',
+    url: '/song',
     controller: 'Song.controller',
     templateUrl: '/templates/song.html'
   });
