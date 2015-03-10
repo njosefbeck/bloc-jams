@@ -13,6 +13,13 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
     controller: 'Landing.controller',
     templateUrl: '/templates/landing.html'
   });
+
+  $stateProvider.state('song', {
+    url: '/song.html',
+    controller: 'Song.controller',
+    templateUrl: '/templates/song.html'
+  });
+  
 }]);
 
 blocJams.controller('Landing.controller', ['$scope', function($scope) {
