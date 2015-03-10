@@ -48,10 +48,12 @@ body.landing {
     .selling-points .point p {
       font-size: 14px; }
 
-img {
-  max-width: 100%;
-  margin: 0;
+.landing-album-list .col-md-4 {
   padding: 0; }
+  .landing-album-list .col-md-4 img {
+    max-width: 100%;
+    margin: 0;
+    padding: 0; }
 
 .album-header-container {
   margin-top: 55px;

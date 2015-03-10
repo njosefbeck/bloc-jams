@@ -35,8 +35,13 @@
   }
 }
 
-img {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+.landing-album-list {
+  .col-md-4 {
+    padding: 0;
+    img {
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
