@@ -326,6 +326,12 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
     templateUrl: '/templates/song.html'
   });
 
+  $stateProvider.state('collection', {
+    url: '/collection',
+    controller: 'Collection.controller',
+    templateUrl: '/templates/collection.html'
+  });
+
 }]);
 
 blocJams.controller('Landing.controller', ['$scope', function($scope) {
@@ -366,7 +372,7 @@ blocJams.controller('Collection.controller', ['$scope', function($scope) {
   for (var i = 0; i < 33; i++) {
     $scope.albums.push(angular.copy(albumPicasso));
   }
-  
+
 }]);
 
 });
