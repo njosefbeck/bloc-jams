@@ -88,7 +88,6 @@ blocJams.controller('Landing.controller', ['$scope', function($scope) {
 
 }]);
 
-//blocJams.controller('Song.controller', ['$scope', function($scope) {
-  //$scope.headerText = "Song Template";
-
-//}]);
+blocJams.controller('Collection.controller', ['$scope', function($scope) {
+  $scope.albums = [];
+}]);
