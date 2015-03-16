@@ -13,6 +13,11 @@
 
   <div class='row'> <!-- Song table -->
     <table class='album-song-listing table'>
+      <tr ng-repeat="song in album.songs">
+        <td class="song-number col-md-1"> {{ $index + 1 }}</td>
+        <td class="col-md-9"> {{ song.name }} </td>
+        <td class="col-md-2"> {{ song.length }} </td>
+      </tr>
     </table>
   </div>
 </div>
