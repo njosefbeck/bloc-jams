@@ -375,6 +375,11 @@ blocJams.controller('Collection.controller', ['$scope', function($scope) {
 
 }]);
 
+blocJams.controller('Album.controller', ['$scope', function($scope) {
+  $scope.album = angular.copy(albumPicasso);
+  
+}]);
+
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {

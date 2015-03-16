@@ -101,3 +101,8 @@ blocJams.controller('Collection.controller', ['$scope', function($scope) {
   }
 
 }]);
+
+blocJams.controller('Album.controller', ['$scope', function($scope) {
+  $scope.album = angular.copy(albumPicasso);
+  
+}]);
