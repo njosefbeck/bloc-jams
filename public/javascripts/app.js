@@ -405,6 +405,14 @@ blocJams.controller('Album.controller', ['$scope', function($scope) {
     return 'default';
   };
 
+  $scope.playSong = function(song) {
+    playingSong = song;
+  };
+
+  $scope.pauseSong = function(song) {
+    playingSong = null;
+  };
+
 }]);
 
 });
