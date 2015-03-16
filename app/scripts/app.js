@@ -59,6 +59,12 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
     templateUrl: '/templates/collection.html'
   });
 
+  $stateProvider.state('album', {
+    url: '/album',
+    templateUrl: '/templates/album.html',
+    controller: 'Album.controller'
+  });
+
 }]);
 
 blocJams.controller('Landing.controller', ['$scope', function($scope) {
@@ -104,5 +110,5 @@ blocJams.controller('Collection.controller', ['$scope', function($scope) {
 
 blocJams.controller('Album.controller', ['$scope', function($scope) {
   $scope.album = angular.copy(albumPicasso);
-  
+
 }]);
