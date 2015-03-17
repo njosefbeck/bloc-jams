@@ -334,8 +334,6 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
 
   $stateProvider.state('album', {
     url: '/album',
-    //templateUrl: '/templates/album.html',
-    //controller: 'Album.controller',
     views: {
       "mainView": { 
         templateUrl: "/templates/album.html",
