@@ -61,9 +61,10 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
 
   $stateProvider.state('album', {
     url: '/album',
-    templateUrl: '/templates/album.html',
+    //templateUrl: '/templates/album.html',
     controller: 'Album.controller',
     views: {
+      "mainView": { template: "/templates/album.html" },
       "playerBar": { template: "/templates/player_bar.html" }
     }
   });
