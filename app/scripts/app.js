@@ -43,8 +43,12 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
 
   $stateProvider.state('landing', {
     url: '/',
-    controller: 'Landing.controller',
-    templateUrl: '/templates/landing.html'
+    views: {
+      "mainView": {
+        templateUrl: '/templates/landing.html',
+        controller: 'Landing.controller'
+      }
+    }
   });
 
   $stateProvider.state('song', {
