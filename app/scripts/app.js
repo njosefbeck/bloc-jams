@@ -126,7 +126,6 @@ blocJams.controller('Album.controller', ['$scope', 'SongPlayer', function($scope
   $scope.album = angular.copy(albumPicasso);
 
   var hoveredSong = null;
-  var playingSong = null;
 
   $scope.onHoverSong = function(song) {
     hoveredSong = song;
@@ -137,7 +136,7 @@ blocJams.controller('Album.controller', ['$scope', 'SongPlayer', function($scope
   };
 
   $scope.getSongState = function(song) {
-    if (song === playingSong) {
+    if (song === SongPlayer.currentSong && SongPlayer.playing) {
       return 'playing';
     }
     else if (song === hoveredSong) {
@@ -147,7 +146,8 @@ blocJams.controller('Album.controller', ['$scope', 'SongPlayer', function($scope
   };
 
   $scope.playSong = function(song) {
-    playingSong = song;
+    SongPlayer.setSong($scope.album, song);
+    SongPlayer.play();
   };
 
   $scope.pauseSong = function(song) {
