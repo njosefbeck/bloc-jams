@@ -358,7 +358,10 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
 
 }]);
 
-blocJams.controller('Landing.controller', ['$scope', function($scope) {
+blocJams.controller('Landing.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
+  
+  ConsoleLogger.log();
+
   $scope.headerText = "Bloc Jams";
 
   $scope.albumURLs = [
@@ -457,7 +460,12 @@ blocJams.service('SongPlayer', function() {
 });
 
 blocJams.service('ConsoleLogger', function() {
-  this.log("Hello World!");
+  return {
+    log: function() {
+      this.console.log("Hello World!");
+    }
+
+  }
 });
 
 });
