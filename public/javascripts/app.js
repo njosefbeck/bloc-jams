@@ -462,7 +462,7 @@ blocJams.service('SongPlayer', function() {
 blocJams.service('ConsoleLogger', function() {
   return {
     log: function() {
-      this.console.log("Hello World!");
+      console.log("Hello World!");
     }
 
   }
