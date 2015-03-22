@@ -476,7 +476,7 @@ blocJams.service('SongPlayer', function() {
 blocJams.service('ConsoleLogger', function() {
   return {
     log: function() {
-      var input = element(by.binding('myForm.input'));
+      var input = element(by.binding('searchBar.input'));
       console.log(input);
     }
 
