@@ -472,9 +472,11 @@ blocJams.service('SongPlayer', function() {
 
     play: function() {
       this.playing = true;
+      currentSoundFile.play();
     },
     pause: function() {
       this.playing = false;
+      currentSoundFile.pause();
     },
     next: function() {
       var currentTrackIndex = trackIndex(this.currentAlbum, this.currentSong);
