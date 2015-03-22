@@ -394,7 +394,10 @@ blocJams.controller('Landing.controller', ['$scope', 'ConsoleLogger', function($
 
 }]);
 
-blocJams.controller('Collection.controller', ['$scope', function($scope) {
+blocJams.controller('Collection.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
+
+  ConsoleLogger.log();
+
   $scope.albums = [];
   for (var i = 0; i < 33; i++) {
     $scope.albums.push(angular.copy(albumPicasso));
