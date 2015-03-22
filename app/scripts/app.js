@@ -258,7 +258,7 @@ blocJams.directive('slider', function() {
   var barWidth = $seekBar.width();
   var offsetX = event.pageX - $seekBar.offset().left; // get mouse x offset here
 
-  var offsetXPercent = (offsetX / barWidth) * 100;
+  var offsetXPercent = (offsetX / $seekBar.width()) * 100;
   offsetXPercent = Math.max(0, offsetXPercent);
   offsetXPercent = Math.min(100, offsetXPercent);
 
