@@ -362,7 +362,7 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
 
 }]);
 
-blocJams.controller('Landing.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
+blocJams.controller('Landing.controller', ['$scope', function($scope) {
   
   //ConsoleLogger.log();
 
