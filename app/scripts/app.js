@@ -91,7 +91,7 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
 
 blocJams.controller('Landing.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
   
-  ConsoleLogger.log();
+  //ConsoleLogger.log();
 
   $scope.headerText = "Bloc Jams";
 
@@ -127,7 +127,7 @@ blocJams.controller('Landing.controller', ['$scope', 'ConsoleLogger', function($
 
 blocJams.controller('Collection.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
 
-  ConsoleLogger.log();
+  //ConsoleLogger.log();
 
   $scope.albums = [];
   for (var i = 0; i < 33; i++) {
@@ -138,7 +138,7 @@ blocJams.controller('Collection.controller', ['$scope', 'ConsoleLogger', functio
 
 blocJams.controller('Album.controller', ['$scope', 'SongPlayer', 'ConsoleLogger', function($scope, SongPlayer, ConsoleLogger) {
   
-  ConsoleLogger.log();
+  //ConsoleLogger.log();
 
   $scope.album = angular.copy(albumPicasso);
 
@@ -178,7 +178,7 @@ blocJams.controller('PlayerBar.controller', ['$scope', 'SongPlayer', function($s
 }]);
 
 blocJams.controller('SearchBar.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
-
+  $scope.consoleLogger = ConsoleLogger;
 }]);
 
 blocJams.service('SongPlayer', function() {
@@ -203,7 +203,8 @@ blocJams.service('SongPlayer', function() {
 blocJams.service('ConsoleLogger', function() {
   return {
     log: function() {
-      console.log("Hello World!");
+      var input = element(by.binding('myForm.input'));
+      console.log(input);
     }
 
   }
