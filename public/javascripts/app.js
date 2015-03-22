@@ -456,6 +456,10 @@ blocJams.service('SongPlayer', function() {
   };
 });
 
+blocJams.service('ConsoleLogger', function() {
+  this.log("Hello World!");
+});
+
 });
 
 ;require.register("scripts/collection", function(exports, require, module) {

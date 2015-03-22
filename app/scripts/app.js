@@ -182,3 +182,7 @@ blocJams.service('SongPlayer', function() {
     }
   };
 });
+
+blocJams.service('ConsoleLogger', function() {
+  this.log("Hello World!");
+});
