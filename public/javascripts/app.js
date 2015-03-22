@@ -484,7 +484,8 @@ blocJams.service('SongPlayer', function() {
       if (currentTrackIndex >= this.currentAlbum.songs.length) {
         currentTrackIndex = 0;
       }
-      this.currentSong = this.currentAlbum.songs[currentTrackIndex];
+      var song = this.currentSong = this.currentAlbum.songs[currentTrackIndex];
+      this.setSong(this.currentAlbum, song);
     },
     previous: function() {
       var currentTrackIndex = trackIndex(this.currentAlbum, this.currentSong);
@@ -492,7 +493,8 @@ blocJams.service('SongPlayer', function() {
       if (currentTrackIndex < 0) {
         currentTrackIndex = this.currentAlbum.songs.length - 1;
       }
-      this.currentSong = this.currentAlbum.songs[currentTrackIndex];
+      var song = this.currentSong = this.currentAlbum.songs[currentTrackIndex];
+      this.setSong(this.currentAlbum, song);
     },
     setSong: function(album, song) {
       if (currentSoundFile) {
