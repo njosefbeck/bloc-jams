@@ -255,16 +255,16 @@ blocJams.service('ConsoleLogger', function() {
 
 blocJams.directive('slider', function() {
   var updateSeekPercentage = function($seekBar, event) {
-  var barWidth = $seekBar.width();
-  var offsetX = event.pageX - $seekBar.offset().left; // get mouse x offset here
+    var barWidth = $seekBar.width();
+    var offsetX = event.pageX - $seekBar.offset().left; // get mouse x offset here
 
-  var offsetXPercent = (offsetX / $seekBar.width()) * 100;
-  offsetXPercent = Math.max(0, offsetXPercent);
-  offsetXPercent = Math.min(100, offsetXPercent);
+    var offsetXPercent = (offsetX / $seekBar.width()) * 100;
+    offsetXPercent = Math.max(0, offsetXPercent);
+    offsetXPercent = Math.min(100, offsetXPercent);
 
-  var percentageString = offsetXPercent + '%';
-  $seekBar.find('.fill').width(percentageString);
-  $seekBar.find('.thumb').css({left: percentageString});
+    var percentageString = offsetXPercent + '%';
+    $seekBar.find('.fill').width(percentageString);
+    $seekBar.find('.thumb').css({left: percentageString});
 }
 
   return {
