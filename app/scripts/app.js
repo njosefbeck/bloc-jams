@@ -179,6 +179,9 @@ blocJams.controller('PlayerBar.controller', ['$scope', 'SongPlayer', function($s
 
 blocJams.controller('SearchBar.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
   $scope.consoleLogger = ConsoleLogger;
+
+  $scope.searchBar = {};
+  $scope.searchBar.searchInput = "Test";
 }]);
 
 blocJams.service('SongPlayer', function() {
@@ -203,7 +206,7 @@ blocJams.service('SongPlayer', function() {
 blocJams.service('ConsoleLogger', function() {
   return {
     log: function() {
-      var input = element(by.binding('searchBar.input'));
+      var input = element(by.binding('searchBar.searchInput'));
       console.log(input);
     }
 
