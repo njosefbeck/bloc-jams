@@ -398,13 +398,17 @@ blocJams.controller('Landing.controller', ['$scope', function($scope) {
 
 }]);
 
-blocJams.controller('Collection.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
+blocJams.controller('Collection.controller', ['$scope', 'ConsoleLogger', 'SongPlayer', function($scope, ConsoleLogger, SongPlayer) {
 
   //ConsoleLogger.log();
 
   $scope.albums = [];
   for (var i = 0; i < 33; i++) {
     $scope.albums.push(angular.copy(albumPicasso));
+  }
+
+  $scope.playAlbum = function(album) {
+    SongPlayer.setSong(album, album.songs[0]);
   }
 
 }]);
