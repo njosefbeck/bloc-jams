@@ -320,6 +320,10 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
       "mainView": {
         templateUrl: '/templates/landing.html',
         controller: 'Landing.controller'
+      },
+      "searchBar": {
+        templateUrl: '/templates/search_bar.html',
+        controller: 'SearchBar.controller'
       }
     }
   });
@@ -444,6 +448,10 @@ blocJams.controller('Album.controller', ['$scope', 'SongPlayer', 'ConsoleLogger'
 
 blocJams.controller('PlayerBar.controller', ['$scope', 'SongPlayer', function($scope, SongPlayer) {
   $scope.songPlayer = SongPlayer;
+}]);
+
+blocJams.controller('SearchBar.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
+
 }]);
 
 blocJams.service('SongPlayer', function() {
