@@ -132,7 +132,10 @@ blocJams.controller('Collection.controller', ['$scope', 'ConsoleLogger', functio
 
 }]);
 
-blocJams.controller('Album.controller', ['$scope', 'SongPlayer', function($scope, SongPlayer) {
+blocJams.controller('Album.controller', ['$scope', 'SongPlayer', 'ConsoleLogger', function($scope, SongPlayer, ConsoleLogger) {
+  
+  ConsoleLogger.log();
+
   $scope.album = angular.copy(albumPicasso);
 
   var hoveredSong = null;
