@@ -437,7 +437,6 @@ blocJams.controller('Album.controller', ['$scope', 'SongPlayer', 'ConsoleLogger'
 
   $scope.playSong = function(song) {
     SongPlayer.setSong($scope.album, song);
-    SongPlayer.play();
   };
 
   $scope.pauseSong = function(song) {
