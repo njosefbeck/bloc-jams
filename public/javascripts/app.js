@@ -531,7 +531,7 @@ blocJams.directive('slider', function() {
     var barWidth = $seekBar.width();
     var offsetX = event.pageX - $seekBar.offset().left; // get mouse x offset here
 
-    var offsetXPercent = (offsetX / $seekBar.width()) * 100;
+    var offsetXPercent = (offsetX / barWidth) * 100;
     offsetXPercent = Math.max(0, offsetXPercent);
     offsetXPercent = Math.min(100, offsetXPercent);
 
@@ -549,25 +549,28 @@ blocJams.directive('slider', function() {
       var $seekBar = $(element);
 
       $seekBar.click(function(event) {
-        updateSeekPercentage($seekBar, event);
+        updateSeekPercentage($(this), event);
       });
 
-      $seekBar.find('.thumb').mousedown(function(event){
+      $seekBar.find('.thumb').mousedown(function(event) {
+        //var $seekBar = $(this).parent();
+
         $seekBar.addClass('no-animate');
 
-        $(document).bind('mousemove.thumb', function(event){
+        $(document).bind('mousemove.thumb', function(event) {
           updateSeekPercentage($seekBar, event);
         });
 
-        //cleanup
-        $(document).bind('mouseup.thumb', function(){
-          $seekBar.removeClass('no-animate');
-          $(document).unbind('mousemove.thumb');
-          $(document).unbind('mouseup.thumb');
-        });
+      //cleanup
+      $(document).bind('mouseup.thumb', function() {
+        $seekBar.removeClass('no-animate');
+
+        $(document).unbind('mousemove.thumb');
+        $(document).unbind('mouseup.thumb');
+      });
 
       });
-    }
+   }
   };
 }); 
 
