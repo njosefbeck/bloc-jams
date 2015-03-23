@@ -526,7 +526,7 @@ blocJams.service('ConsoleLogger', function() {
   }
 });
 
-/* IMRAN KHOJA'S VERSION OF SLIDER DIRECTIVE */
+/* IMRAN KHOJA'S VERSION OF SLIDER DIRECTIVE -- Also non-functioning, thumb doesn't move
 
 blocJams.directive('slider', ['$document', function($document) {
 
@@ -616,10 +616,11 @@ blocJams.directive('slider', ['$document', function($document) {
       };
     }
   }
-}]);
+}]); */
 
 
-/* MY VERSION OF THE SLIDER DIRECTIVE -- FUNCTIONS, BUT WITH BUG 
+/* MY VERSION OF THE SLIDER DIRECTIVE -- Functions, but bug where a static thumb is left behind on mouse click and drag
+so there are in effect two thumbs, one that stays in the initial position, and one that moves with mouse click */
 blocJams.directive('slider', function() {
 
   var updateSeekPercentage = function($seekBar, event) {
@@ -664,7 +665,7 @@ blocJams.directive('slider', function() {
       });
     }
   };
-}); */
+});
 
 });
 
