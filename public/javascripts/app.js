@@ -527,132 +527,7 @@ blocJams.service('ConsoleLogger', function() {
 });
 
 blocJams.directive('slider', function() {
- 
-/* VERSION TAKEN FROM EMBLOU2's github */
-// Returns a number between 0 and 1 to determine where the mouse event happened along the slider bar.
-   var calculateSliderPercentFromMouseEvent = function($slider, event) {
-     var offsetX =  event.pageX - $slider.offset().left; // Distance from left
-     var sliderWidth = $slider.width(); // Width of slider
-     var offsetXPercent = (offsetX  / sliderWidth);
-     offsetXPercent = Math.max(0, offsetXPercent);
-     offsetXPercent = Math.min(1, offsetXPercent);
-     return offsetXPercent;
-   }
-   var numberFromValue = function(value, defaultValue) {
-     if (typeof value === 'number') {
-       return value;
-     }
- 
-     if(typeof value === 'undefined') {
-       return defaultValue;
-     }
- 
-     if(typeof value === 'string') {
-       return Number(value);
-     }
-   }
 
-      var numberFromValue = function(value, defaultValue) {
-        if (typeof value === 'number') {
-          return value;
-        }
- 
-        if(typeof value === 'undefined') {
-          return defaultValue;
-        }
- 
-        if(typeof value === 'string') {
-          return Number(value);
-        }
-   }
- 
-
-   return {
-     templateUrl: '/templates/directives/slider.html', // We'll create these files shortly.
-     replace: true,
-     restrict: 'E',
-     scope: {
-        onChange: '&'
-      },
-    link: function(scope, element, attributes) {
-      scope.value = 0;
-      scope.max = 100;
-      var $seekBar = $(element);
-            attributes.$observe('value', function(newValue) {
-        scope.value = numberFromValue(newValue, 0);
-      });
- 
-      attributes.$observe('max', function(newValue) {
-        scope.max = numberFromValue(newValue, 100) || 100;
-      });
-
-         attributes.$observe('value', function(newValue) {
-        scope.value = numberFromValue(newValue, 0);
-      });
- 
-      attributes.$observe('max', function(newValue) {
-        scope.max = numberFromValue(newValue, 100) || 100;
-      });
- 
-
-      var percentString = function () {
-        var value = scope.value || 0;
-        var max = scope.max || 100;
-        percent = value / max * 100;
-        return percent + "%";
-      }
-
-      var notifyCallback = function(newValue) {
-        if(typeof scope.onChange === 'function') {
-          scope.onChange({value: newValue});
-        }
-      };
- 
-      scope.fillStyle = function() {
-        console.log("Fillstyle!");
-        return {
-          width: percentString()
-        };
-       }
- 
-       scope.thumbStyle = function() {
-         return {
-          left: percentString()
-        };
-       }
-
-      scope.onClickSlider = function(event) {
-        
-         var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
-         scope.value = percent * scope.max;
-         notifyCallback(scope.value);
-       }
-
-      scope.trackThumb = function() {
-        $document.bind('mousemove.thumb', function(event){
-           var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
-           scope.$apply(function(){
-             scope.value = percent * scope.max;
-             notifyCallback(scope.value);
-           });
-         });
- 
-         //cleanup
-         $document.bind('mouseup.thumb', function(){
-           $document.unbind('mousemove.thumb');
-           $document.unbind('mouseup.thumb');
-         });
-       };
-       var notifyCallback = function(newValue) {
-         if(typeof scope.onChange === 'function') {
-           scope.onChange({value: newValue});
-         }
-       };
-    }
-   };
- }]);
-
- /* MY ATTEMPT - ALSO, BLOC JAMS VERSION
   var updateSeekPercentage = function($seekBar, event) {
      var barWidth = $seekBar.width();
      var offsetX =  event.pageX - $seekBar.offset().left;
@@ -695,7 +570,7 @@ blocJams.directive('slider', function() {
       });
     }
   };
-}); */
+}); 
 
 });
 
