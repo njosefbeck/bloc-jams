@@ -255,6 +255,16 @@ blocJams.service('ConsoleLogger', function() {
 
 blocJams.directive('slider', function() {
  
+  //Returns a number between 0 and 1 to determine where the mouse event happened along the slider bar.
+  var calculateSliderPercentFromMouseEvent = function($slider, event) {
+    var offsetX = event.pageX - $slider.offset().left; // Distance from left
+    var sliderWidth = $slider.width(); // Width of slider
+    var offsetXPercent = (offsetX / sliderWidth);
+    offsetXPercent = Math.max(0, offsetXPercent);
+    offsetXPercent = Math.min(1, offsetXPercent);
+    return offsetXPercent;
+  }
+
   return {
     templateUrl: '/templates/directives/slider.html',
     replace: true,
