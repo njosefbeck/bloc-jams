@@ -259,10 +259,32 @@ blocJams.directive('slider', function() {
     templateUrl: '/templates/directives/slider.html',
     replace: true,
     restrict: 'E',
-    link: function(scope, element, attributes) {
+    scope: {}, // Creates a scope that exists only in this directive.
+    link: function(scope, element, attributes) { 
+      // These values represent the progress into the song/volume bar, and its max value.
+      // For now, we're supplying arbitrary initial and max values.
+      scope.value = 0;
+      scope.max = 200;
  
       var $seekBar = $(element);
  
+      var percentString = function () {
+        var percent = Number(scope.value) / Number(scope.max) * 100;
+        return percent + "%";
+      }
+
+      scope.fillStyle = function() {
+        return {width: percentString()};
+      }
+
+      scope.thumbStyle = function() {
+        return {left: percentString()};
+      }
+
+      scope.onClickSlider = function(event) {
+        var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
+        scope.value = percent * scope.max;
+      }
       
     }
   };
