@@ -301,7 +301,9 @@ blocJams.directive('slider', ['$document', function($document) {
       });
  
       var percentString = function () {
-        var percent = Number(scope.value) / Number(scope.max) * 100;
+        var value = scope.value || 0;
+        var max = scope.max || 100;
+        percent = value / max * 100;
         return percent + "%";
       }
 
