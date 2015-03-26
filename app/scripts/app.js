@@ -265,6 +265,20 @@ blocJams.directive('slider', ['$document', function($document) {
     return offsetXPercent;
   }
 
+  var numberFromValue = function(value, defaultValue) {
+    if (typeof value === 'number') {
+      return value;
+    }
+
+    if (typeof value === 'undefined') {
+      return defaultValue;
+    }
+
+    if (typeof value === 'string') {
+      return Number(value);
+    }
+  }
+
   return {
     templateUrl: '/templates/directives/slider.html',
     replace: true,
