@@ -278,7 +278,13 @@ blocJams.directive('slider', ['$document', function($document) {
  
       var $seekBar = $(element);
 
-      console.log(attributes);
+      attributes.$observe('value', function(newValue) {
+        scope.value = numberFromValue(newValue, 0);
+      });
+
+      attributes.$observe('max', function(newValue) {
+        scope.max = numberFromValue(newValue, 100) || 100;
+      });
  
       var percentString = function () {
         var percent = Number(scope.value) / Number(scope.max) * 100;
