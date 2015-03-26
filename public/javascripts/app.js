@@ -568,6 +568,21 @@ blocJams.directive('slider', function() {
         var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
         scope.value = percent * scope.max;
       }
+
+      scope.trackThumb = function() {
+        $document.bind('mousemove.thumb', function(event){
+          var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
+          scope.$apply(function(){
+            scope.value = percent * scope.max;
+          });
+        });
+
+        //cleanup
+        $document.bind('mouseup.thumb', function(){
+          $document.unbind('mousemove.thumb');
+          $document.unbind('mouseup.thumb');
+        })
+      }
       
     }
   };
