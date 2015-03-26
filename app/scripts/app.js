@@ -327,6 +327,7 @@ blocJams.directive('slider', ['$document', function($document) {
       scope.onClickSlider = function(event) {
         var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
         scope.value = percent * scope.max;
+        notifyCallback(scope.value);
       }
 
       scope.trackThumb = function() {
@@ -334,6 +335,7 @@ blocJams.directive('slider', ['$document', function($document) {
           var percent = calculateSliderPercentFromMouseEvent($seekBar, event);
           scope.$apply(function(){
             scope.value = percent * scope.max;
+            notifyCallback(scope.value);
           });
         });
 
