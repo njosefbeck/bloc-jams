@@ -226,6 +226,13 @@ blocJams.service('SongPlayer', function() {
       var song = this.currentSong = this.currentAlbum.songs[currentTrackIndex];
       this.setSong(this.currentAlbum, song);
     },
+    seek: function(time) {
+      // Checks to make sure that a sound file is playing before seeking.
+      if (currentSoundFile) {
+        // Uses a Buzz method to set the time of the song.
+        currentSoundFile.setTime(time);
+      }
+    },
     setSong: function(album, song) {
       if (currentSoundFile) {
         currentSoundFile.stop();
