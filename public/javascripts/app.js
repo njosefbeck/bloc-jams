@@ -526,7 +526,7 @@ blocJams.service('ConsoleLogger', function() {
   }
 });
 
-blocJams.directive('slider', function() {
+blocJams.directive('slider', ['$document', function($document) {
  
   //Returns a number between 0 and 1 to determine where the mouse event happened along the slider bar.
   var calculateSliderPercentFromMouseEvent = function($slider, event) {
@@ -586,7 +586,7 @@ blocJams.directive('slider', function() {
       
     }
   };
-});
+}]);
 
 });
 
