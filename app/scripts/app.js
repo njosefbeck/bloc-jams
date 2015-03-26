@@ -344,6 +344,12 @@ blocJams.directive('slider', ['$document', function($document) {
         })
       }
       
+      var notifyCallback = function (newValue) {
+        if (typeof scope.onChange === 'function') {
+          scope.onChange({value: newValue});
+        }
+      };
+
     }
   };
 }]);
