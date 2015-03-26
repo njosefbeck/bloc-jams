@@ -563,7 +563,9 @@ blocJams.directive('slider', ['$document', function($document) {
     templateUrl: '/templates/directives/slider.html',
     replace: true,
     restrict: 'E',
-    scope: {}, // Creates a scope that exists only in this directive.
+    scope: {
+      onChange: '&'
+    }, // Creates a scope that exists only in this directive.
     link: function(scope, element, attributes) { 
       // These values represent the progress into the song/volume bar, and its max value.
       // For now, we're supplying arbitrary initial and max values.
