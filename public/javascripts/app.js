@@ -506,6 +506,9 @@ blocJams.service('SongPlayer', function() {
         currentSoundFile.setTime(time);
       }
     },
+    onTimeUpdate: function(callback) {
+      return $rootScope.$on('sound:timeupdate', callback);
+    },
     setSong: function(album, song) {
       if (currentSoundFile) {
         currentSoundFile.stop();
