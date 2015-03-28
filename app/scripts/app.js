@@ -184,6 +184,7 @@ blocJams.controller('PlayerBar.controller', ['$scope', 'SongPlayer', function($s
       $scope.playTime = time;
     });
   });
+  
 }]);
 
 blocJams.controller('SearchBar.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
