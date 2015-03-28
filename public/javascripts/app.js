@@ -518,6 +518,10 @@ blocJams.service('SongPlayer', function() {
         preload: true
       });
 
+      currentSoundFile.bind('timeupdate', function(e){
+        $rootScope.$broadcast('sound:timeupdate', this.getTime());
+      });
+
       this.play();
     }
   };
