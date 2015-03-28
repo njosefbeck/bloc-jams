@@ -457,7 +457,7 @@ blocJams.controller('PlayerBar.controller', ['$scope', 'SongPlayer', function($s
       $scope.playTime = time;
     });
   });
-  
+
 }]);
 
 blocJams.controller('SearchBar.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
@@ -467,7 +467,7 @@ blocJams.controller('SearchBar.controller', ['$scope', 'ConsoleLogger', function
   $scope.searchBar.searchInput = "Test";
 }]);
 
-blocJams.service('SongPlayer', function() {
+blocJams.service('SongPlayer', ['$rootScope', function($rootScope) {
   
   var currentSoundFile = null;
 
@@ -535,7 +535,7 @@ blocJams.service('SongPlayer', function() {
       this.play();
     }
   };
-});
+}]);
 
 blocJams.service('ConsoleLogger', function() {
   return {
@@ -642,6 +642,35 @@ blocJams.directive('slider', ['$document', function($document) {
     }
   };
 }]);
+
+blocJams.filter('timecode', function(){
+  return function(seconds) {
+    seconds = Number.parseFloat(seconds);
+
+    // Returned when no time is provided.
+    if (Number.isNaN(seconds)) {
+      return '-:--';
+    }
+
+    // Make it a whole number
+    var wholeSeconds = Math.floor(seconds);
+
+    var minutes = Math.floor(wholeSeconds / 60);
+
+    remainingSeconds = wholeSeconds % 60;
+
+    var output = minutes + ':';
+
+    // Zero pad seconds, so 9 seconds should be :09
+    if (remainingSeconds < 10) {
+      output += '0';
+    }
+
+    output += remainingSeconds;
+
+    return output;
+  }
+})
 
 });
 
