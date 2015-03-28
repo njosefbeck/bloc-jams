@@ -178,6 +178,12 @@ blocJams.controller('Album.controller', ['$scope', 'SongPlayer', 'ConsoleLogger'
 
 blocJams.controller('PlayerBar.controller', ['$scope', 'SongPlayer', function($scope, SongPlayer) {
   $scope.songPlayer = SongPlayer;
+
+  SongPlayer.onTimeUpdate(function(event, time){
+    $scope.$apply(function(){
+      $scope.playTime = time;
+    });
+  });
 }]);
 
 blocJams.controller('SearchBar.controller', ['$scope', 'ConsoleLogger', function($scope, ConsoleLogger) {
